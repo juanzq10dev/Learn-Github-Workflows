@@ -1,0 +1,12 @@
+name: build dockerfile
+
+on: 
+  push:
+
+jobs: 
+  build-image:
+    uses: organization/example-repo/.github/workflows/called_workflow.yml@main
+    secrets: inherit
+    with: 
+      dockerfile-path: Dockerfile
+      
